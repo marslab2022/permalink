@@ -1,0 +1,245 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 55rem;
+}
+
+header {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: solid 1px rgb(39, 50, 62);
+  color: rgb(236, 233, 230);
+}
+
+main {
+  border-left: solid 1px;
+  border-right: solid 1px;
+  border-color: rgb(39, 50, 62);
+  min-height: 100vh;
+  margin-left: 0rem;
+}
+
+textarea {
+	font-family: inherit;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 0.75rem;
+	font-size: 1.25rem;
+  line-height: 1.75rem;
+	height:28px;
+	width: 100%;
+	background-color: transparent;
+	border-width: 0px;
+	resize: none;
+	outline: none;
+	color: rgb(219, 216, 213);
+}
+
+.submitButton {
+	border-radius: 0;
+	justify-content: space-between;
+	width: 40%;
+	border: none;
+	margin-left: 2rem;
+	display: inline-flexbox;
+	font-size: 16px;
+	font-weight: 600;
+	height: 50px;
+	line-height: 48px;
+	padding: 0 24px;
+	border-radius: 99999px;
+	background-color: rgb(80, 162, 255);
+	color: rgb(27, 39, 51);
+	cursor: pointer;
+}
+
+.darkRow {
+	text-align: left;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	color: rgb(75, 89, 105);
+}
+
+.blank {
+	text-align: center;
+	padding-top: 1rem;
+  padding-bottom: 1rem;
+	padding-left: 2rem;
+  padding-right: 2rem;
+	background-color: 0px rgb(39, 50, 62);
+	border-bottom: solid 1px rgb(39, 50, 62);
+	color: rgb(39, 50, 62);
+}
+
+.newCommit {
+  position: relative;
+  margin-top: 0rem;
+  padding-left: 2rem;
+  padding-left: 2rem;
+  border-bottom: solid 1px rgb(39, 50, 62);
+}
+
+/* table style */
+
+table {
+  color: rgb(80,162,255);
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid rgb(75, 89, 105);
+}
+
+.tableTitle {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: rgb(80,162,255);
+  font-weight: 600;
+}
+
+.tableCol {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: rgb(75, 89, 105);
+}
+
+/* wallet select button  */
+
+.walletDiv {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* commit component style */
+
+.center {
+  display:flex;
+  justify-content:center;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.appName {
+  margin-left: 1rem;
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: rgb(80,162,255);
+}
+
+.version {
+  margin-left: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-top: 1.5rem;
+  color: rgb(163, 161, 161);
+}
+
+.description {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-size: larger;
+  color: rgb(163, 161, 161);
+}
+
+/* progress loading styles */
+
+#loadingProgressG{
+	width:100%;
+	height:1px;
+	overflow:hidden;
+	background-color:rgba(80,162,255, 0.4);
+	margin:auto;
+}
+
+.loadingProgressG{
+	background-color:rgb(80,162,255);
+	margin-top:0;
+	margin-left:-622px;
+	animation-name:bounce_loadingProgressG;
+		-o-animation-name:bounce_loadingProgressG;
+		-ms-animation-name:bounce_loadingProgressG;
+		-webkit-animation-name:bounce_loadingProgressG;
+		-moz-animation-name:bounce_loadingProgressG;
+	animation-duration:8.9s;
+		-o-animation-duration:8.9s;
+		-ms-animation-duration:8.9s;
+		-webkit-animation-duration:8.9s;
+		-moz-animation-duration:8.9s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-timing-function:linear;
+		-o-animation-timing-function:linear;
+		-ms-animation-timing-function:linear;
+		-webkit-animation-timing-function:linear;
+		-moz-animation-timing-function:linear;
+	width:100%;
+	height:6px;
+}
+
+
+
+@keyframes bounce_loadingProgressG{
+	0%{
+		margin-left:-622px;
+	}
+
+	100%{
+		margin-left:622px;
+	}
+}
+
+@-o-keyframes bounce_loadingProgressG{
+	0%{
+		margin-left:-622px;
+	}
+
+	100%{
+		margin-left:622px;
+	}
+}
+
+@-ms-keyframes bounce_loadingProgressG{
+	0%{
+		margin-left:-622px;
+	}
+
+	100%{
+		margin-left:622px;
+	}
+}
+
+@-webkit-keyframes bounce_loadingProgressG{
+	0%{
+		margin-left:-622px;
+	}
+
+	100%{
+		margin-left:622px;
+	}
+}
+
+@-moz-keyframes bounce_loadingProgressG{
+	0%{
+		margin-left:-622px;
+	}
+
+	100%{
+		margin-left:622px;
+	}
+}
