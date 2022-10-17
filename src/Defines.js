@@ -2,3 +2,4 @@ export const appLogo = <svg width="48px" height="48px" viewBox="0 0 24 24" fill=
 export const appName = "PermaLink";
 export const adminWalletAddress = "g-HsAODsIOoTG4MgvmeOTmqyA_RKMupujUuok-nrmkg";
 export const contractTxId = 'HKG61bIduM_Ql1Dsm866E0OOWrNB_NzL7EC52RkQ5cA';
+export const autoPilot = false;

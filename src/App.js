@@ -8,7 +8,7 @@ import { Commit } from './components/Commit';
 import { WalletSelectButton } from './components/WalletSelectButton';
 import { NewCommit } from './components/NewCommit';
 import { MoreCommits } from './components/MoreCommits';
-import { adminWalletAddress } from './Defines';
+import { adminWalletAddress, autoPilot } from './Defines';
 
 connectContract();
 
@@ -57,6 +57,10 @@ const Home = (props) => {
     <>
       <header>PermaLink</header>
       {isSearching && <ProgressSpinner />}
+      {
+        !isSearching && interactionError === '' && 
+        autoPilot && url !== '' && window.location.replace(url)
+      }
       { 
         !isSearching && interactionError === ''
         &&
