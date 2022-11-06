@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import { ProgressSpinner } from './components/ProgressSpinner';
 import { connectContract, connectWallet, getLatest, getWalletAddress } from './lib/api';
 import { Commit } from './components/Commit';
@@ -19,8 +19,9 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" name="" element={<Home />} />
-            <Route path="/more" element={<More />} />
-            <Route path="/admin" element={<Admin />} />
+            <Route path="/_more" element={<More />} />
+            <Route path="/_admin" element={<Admin />} />
+            <Route path="/:pathname" element={<Home />} />
           </Routes>
         </main>
       </div>
@@ -29,6 +30,8 @@ const App = () => {
 };
 
 const Home = (props) => {
+  const location = useLocation();
+
   const [isSearching, setIsSearching] = React.useState(true);
   const [interactionError, setInteractionError] = React.useState("");
   const [url, setUrl] = React.useState("");
@@ -53,6 +56,11 @@ const Home = (props) => {
     });
   }, []);
 
+  if (url && location.pathname !== '/') {
+    window.location.replace(url+'/#'+location.pathname);
+    return;
+  }
+
   return (
     <>
       <header>PermaLink</header>
@@ -76,9 +84,9 @@ const Home = (props) => {
         <div className='darkRow'> {interactionError} </div>
       }
       <div className='center'>
-        <Link to="/more">more</Link>
+        <Link to="/_more">more</Link>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Link to="/admin">admin</Link>
+        <Link to="/_admin">admin</Link>
       </div>
     </>
   );
