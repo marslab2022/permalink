@@ -21,7 +21,7 @@ const App = () => {
             <Route path="/" name="" element={<Home />} />
             <Route path="/_more" element={<More />} />
             <Route path="/_admin" element={<Admin />} />
-            <Route path="/:pathname" element={<Home />} />
+            <Route path="/*" element={<Home />} />
           </Routes>
         </main>
       </div>
@@ -58,7 +58,7 @@ const Home = (props) => {
 
   if (url && location.pathname !== '/') {
     window.location.replace(url+'/#'+location.pathname);
-    return;
+    return (<>Redirecting...</>);
   }
 
   return (
